@@ -1,0 +1,11 @@
+@import url("/CSS/_global.css"); /*общие свойства*/
+@import url("/CSS/_1-header.css"); /*верхний и нижний хэдер. выпадающие списки, кнопки поиска*/
+@import url("/CSS/_1-burger.css"); /*бургер*/
+@import url("/CSS/_2-hero.css"); /*херо. слайдер.*/
+@import url("/CSS/_3-about.css"); /*о нас*/
+@import url("/CSS/_4-gallery.css"); /*галлерея. селектор, чекбокс, слайдер*/
+@import url('/CSS/_5-catalog.css'); /*каталог. аккордеон*/
+@import url('/CSS/_6-events.css'); /*события. слайдер*/
+@import url('/CSS/_7-projects.css'); /*проекты. слайдер*/
+@import url('/CSS/_8-contacts.css'); /*контакты. валидатор, карта*/
+@import url('/CSS/_9-footer.css'); /*футер*/
