@@ -1,0 +1,130 @@
+/*hero*/
+.hero {
+    padding-top: 68px;
+    padding-bottom: 122px;
+}
+
+.hero__content {
+    max-width: 597px;
+    color: var(--color-white);
+}
+
+.hero__title {
+    margin-top: 0;
+    margin-bottom:0;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 94px;
+}
+
+.hero__text {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.hero__text:last-of-type {
+    margin-bottom: 92px;
+}
+
+.hero__btn {
+    display: inline-block;
+    position: relative;
+    padding: 23px 35px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    border: 3px solid var(--color-main);
+    border-radius: 100px;
+    background-color: var(--color-main);
+    gap: 10px;
+    color: var(--color-white);
+    transition: var(--short) border, var(--short) background-color;
+    outline: none;
+}
+
+.hero__btn:focus::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    bottom: -7px;
+    left: -7px;
+    border: 2px solid;
+    border-radius: 100px;
+    outline: none;
+    transition: var(--short) border;
+}
+
+.hero__btn:hover {
+    border-color: var(--btn-color-btn);
+}
+
+.hero__btn:active {
+    background-color: var(--color-main-active);
+}
+
+.hero__btn:focus {
+    border-color: transparent;
+}
+
+/*slider*/
+.top-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--font-color-main);
+}
+
+.top-wrapper__header {
+    z-index: 3;
+}
+
+.top-wrapper__hero {
+    z-index: 2;
+}
+
+.top-wrapper__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation-name: resize;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.top-wrapper__slide {
+    background-size: cover;
+    background-position: center top;
+}
+
+.top-wrapper__header,
+.top-wrapper__hero {
+    position: relative;
+}
+
+.top-wrapper__slide--1 {
+    background-image: url('../IMG/hero/hero-back-1.jpg');
+}
+
+.top-wrapper__slide--2 {
+    background-image: url('../IMG/hero/hero-back-2.jpg');
+}
+
+.top-wrapper__slide--3 {
+    background-image: url('../IMG/hero/hero-back-3.jpg');
+}
+
+@keyframes resize {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}

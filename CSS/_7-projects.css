@@ -1,0 +1,113 @@
+.projects {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.projects__text {
+    max-width: 1080px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--font-color-main);
+    margin-bottom: 20px;
+}
+
+
+/*tooltips*/
+
+.tooltip-logo path {
+    color: var(--color-main);
+}
+.projects__text-tooltip {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.projects__text-tooltip:hover .tooltip-logo,
+.projects__text-tooltip:focus .tooltip-logo {
+    background-color: var(--btn-color-btn);
+    border-radius: 50%;
+    transition: all var(--short) ease-in-out;
+}
+.projects__text-tooltip:focus {
+  outline: none;
+}
+
+.tooltip-logo:active {
+    background-color: var(--color-main);
+    border-radius: 50%;
+    transition: all var(--short) ease-in-out;
+}
+
+.tooltip-logo:active .tooltip-logo-path-i {
+    fill: var(--color-white);
+}
+
+
+.tippy-box {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-radius: 0px;
+}
+
+.tippy-box>.tippy-arrow:before {
+    color: var(--color-main);
+}
+
+.tippy-content {
+    max-width: 240px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/*slider*/
+
+.partners-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners-slider__slider {
+    overflow: hidden;
+    width: calc(1450 / 1600 * 100%);
+}
+
+.partners-slider__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    padding: 32px 60px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-gray);
+    outline: none;
+}
+
+.partners-slider__image {
+    max-height: 100%;
+    filter: grayscale(1);
+    opacity: .4;
+    transition-property: filter, opacity;
+    transition-duration: var(--middle);
+}
+
+.partners-slider__slide:hover .partners-slider__image {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.partners-slider__slide:focus {
+    border-color: var(--color-main);
+}
+
+.partners-slider__slide:active {
+    border-color: var(--color-main);
+}
+
+.partners-slider__slide:active .partners-slider__image {
+    border-color: var(--color-main);
+}

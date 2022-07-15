@@ -1,0 +1,240 @@
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.catalog__title {
+  margin-bottom: 0;
+  margin-bottom: 17px;
+}
+
+.catalog__tab-content {
+  display: block;
+  animation-name: fade-in;
+  animation-duration: var(--middle);
+}
+
+.text.catalog__text {
+  margin-bottom: 40px;
+}
+
+.catalog__tab-content-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__painter-info-wrap {
+  width: calc(750 / 1600 * 100%);
+}
+
+.catalog__painter-info {
+  display: none;
+}
+
+.catalog__painter-years {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.catalog__painter-info.is-active {
+  display: block;
+  animation-name: fade-in;
+  animation-duration: var(--middle);
+}
+
+.catalog__painter-image {
+  margin-bottom: 20px;
+}
+
+.catalog__painter-name {
+  margin-bottom: 7px;
+}
+
+.catalog__painters {
+  width: calc(800 / 1600 * 100%);
+}
+
+.accordion__item:first-child .accordion__heading {
+  border-top: 1px solid var(--color-gray);
+}
+
+.accordion__heading {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: -1px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid var(--color-gray);
+  border-right: none;
+  border-left: none;
+  padding: 41px 120px 41px 0;
+  font-size: 24px;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: color var(--short) ease, border-color var(--short) ease;
+}
+
+.accordion__item:first-child .accordion__heading:hover,
+.accordion__heading:hover {
+  border-color: var(--color-main);
+}
+
+.accordion__item:first-child .accordion__heading:active,
+.accordion__heading:active,
+.is-active.accordion__item:first-child .accordion__heading,
+.is-active.accordion__item .accordion__heading {
+  border-color: var(--color-main-active);
+}
+
+.accordion__heading-text {
+  position: relative;
+}
+
+.accordion__heading-text-wrap {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.accordion__heading-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 8px);
+  height: 100%;
+  transform: translate(-50%, -50%) scaleX(0);
+  background-color: var(--color-main);
+  transition: transform var(--short) ease;
+}
+
+.accordion__heading:hover {
+  color: var(--color-main);
+}
+
+.accordion__heading:active {
+  color: var(--color-main-active);
+}
+
+.accordion__heading:focus:not(:active) {
+  color: var(--color-white);
+  outline: none;
+}
+
+.accordion__heading:focus:not(:active) .accordion__heading-text::before {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+.head-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%) rotate(-180deg);
+  transition: background-color.3s, var(--middle) ease, transform var(--short), var(--middle) ease;
+}
+
+.head-icon-round {
+  transition: fill var(--middle) ease, stroke var(--middle) ease;
+}
+
+.accordion__heading:hover .head-icon-round,
+.accordion__heading:focus .head-icon-round {
+  fill: var(--btn-color-btn);
+  stroke: var(--btn-color-btn);
+}
+
+.accordion__heading:hover .head-icon::before,
+.accordion__heading:hover .head-icon::after,
+.accordion__heading:focus .head-icon::before,
+.accordion__heading:focus .head-icon::after {
+  background-color: var(--color-white);
+}
+
+.is-active .head-icon {
+  transform: translateY(-50%) rotate(0);
+}
+
+.is-active .accordion__heading .head-icon-round {
+  fill: var(--btn-color-btn);
+  stroke: var(--color-main);
+}
+
+.accordion__content {
+  overflow: hidden;
+  visibility: hidden;
+  margin-top: -1px;
+  border-bottom: 1px solid transparent;
+}
+
+.is-active .accordion__content {
+  visibility: visible;
+  border-color: var(--color-gray);
+}
+
+.accordion__content-wrap {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+
+.accordion__inner-list {
+  width: 91%;
+  column-count: 3;
+}
+
+.accordion__painter-link.is-active {
+  color: var(--color-main-active);
+}
+
+.accordion__empty {
+  display: flex;
+}
+
+.accordion__empty-pic {
+  margin-right: 25px;
+  padding: 12px;
+  border: 2px solid var(--color-gray);
+}
+
+.accordion__empty-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 275px;
+
+}
+
+.accordion__empty-title.title-h3 {
+  margin-bottom: 5px;
+}
+
+.accordion__empty-text {
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
